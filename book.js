@@ -1,4 +1,7 @@
-exports.name = 'Node.js by example';
-exports.read = function() {
-console.log('I am reading ' + exports.name);
+var ratePoints = 0;
+exports.rate = function(points) {
+ratePoints = points;
+}
+exports.getPoints = function() {
+return ratePoints;
 }
