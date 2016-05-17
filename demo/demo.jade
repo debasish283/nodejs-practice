@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+  title= DemoPage
+  script(type='text/javascript').
+    var jade = require('jade');
+    var fn = jade.compile(jadeTemplate);
+    var htmlOutput = fn({
+    maintainer: {
+      name: 'Debasish',
+      tweet: '@debasish283',
+      facebook: '@guddu283'
+      }
+    });
+  body
+    div
+
+      h1 This is a demo page: = + 'maintainer.name'
+      tr
+        td Twitter
+        td= maintainer.tweet
+      tr
+        td Facebook
+        td= maintainer.facebook
